@@ -33,6 +33,10 @@ public class ContentCollectionRepository {
         contentList.add(c);
     }
 
+    public void delete(Integer id) {
+        contentList.removeIf(c -> c.id().equals(id));
+    }
+
     public List<Content> findAll() {
         return contentList;
     }

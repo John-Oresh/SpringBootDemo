@@ -34,4 +34,10 @@ public class ContentController {
         }
         contentCollectionRepository.save(content);
     }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Integer id) {
+//        contentCollectionRepository.findAll().removeIf(content -> content.id().equals(id));
+        contentCollectionRepository.delete(id);
+    }
 }
